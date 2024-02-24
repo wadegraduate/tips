@@ -1,0 +1,22 @@
+{
+  "images" : [
+    {
+      "filename" : "calculator-calculation-computer-icons-calculator-75abbe12f02ccb6b264224d509c4bb77.png",
+      "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "output-onlinepngtools.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
