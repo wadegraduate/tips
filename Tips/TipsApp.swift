@@ -15,7 +15,7 @@ struct TipsApp: App {
     var body: some Scene {
         WindowGroup {
             if isActive {
-                CalculationView()
+                //CalculationView()
             }else {
                 LaunchView(isActive: $isActive)
             }

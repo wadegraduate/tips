@@ -1,40 +1,7 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "" : {
-
-    },
-    "%.0f%%" : {
-
-    },
-    "Bill Information" : {
-
-    },
-    "Bill Totals" : {
-
-    },
-    "Enter Bill Amount" : {
-
-    },
-    "Reset" : {
-
-    },
-    "Subtotal" : {
-
-    },
-    "Test" : {
-
-    },
-    "Tip" : {
-
-    },
-    "Tip Amount" : {
-
-    },
-    "Tips" : {
-
-    },
-    "Total With Tip" : {
+    "Hello, world!" : {
 
     }
   },
