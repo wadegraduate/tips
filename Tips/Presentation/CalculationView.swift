@@ -149,6 +149,6 @@ struct CalculationView: View {
 }
 
 
-#Preview {
-    CalculationView()
-}
+//#Preview {
+//    CalculationView()
+//}

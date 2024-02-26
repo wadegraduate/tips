@@ -65,6 +65,6 @@ struct LaunchView: View {
     }
 }
 
-#Preview {
-    LaunchView(isActive: .constant(false))
-}
+//#Preview {
+//    LaunchView(isActive: .constant(false))
+//}

@@ -28,6 +28,6 @@ struct LabeledAmountView: View {
     }
 }
 
-#Preview {
-    LabeledAmountView(localisedString: "", value: 0.0, currencyCode: "")
-}
+//#Preview {
+//    LabeledAmountView(localisedString: "", value: 0.0, currencyCode: "")
+//}
