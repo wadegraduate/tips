@@ -53,11 +53,11 @@ struct CalculationView: View {
             .frame(height: 60)
             .keyboardType(.decimalPad)
             .listRowBackground(Color.theme.secondaryBackground)
-            .onChange(of: isFocused) { value in
-                if value {
-                    viewModel.formatBillAmount()
-                }
-            }
+//            .onChange(of: isFocused) { value in
+//                if value {
+//                    viewModel.formatBillAmount()
+//                }
+//            }
             .toolbar {
                 ToolbarItemGroup(placement: .keyboard) {
                     Spacer()
@@ -129,7 +129,7 @@ struct CalculationView: View {
         Section {
             HStack {
                 Button(action: {
-                    viewModel.reset()
+                    viewModel.resetValues()
                 }, label: {
                     Spacer()
                     Text(String(localized: "Reset"))
@@ -142,7 +142,7 @@ struct CalculationView: View {
             .contentShape(Rectangle())
             .listRowBackground(Color.theme.secondaryBackground)
             .onTapGesture {
-                viewModel.reset()
+                viewModel.resetValues()
             }
         }
     }

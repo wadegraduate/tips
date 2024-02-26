@@ -28,28 +28,15 @@ final class CalculationViewModel: ObservableObject {
         }
         return 0
     }
-    
-    lazy var currencyFormatter: NumberFormatter = {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .currency
-        formatter.currencyCode = defaultCurrency
-        return formatter
-    }()
-    
+        
     
     func selectTipPercentage(percentage: Double) {
         tipPercentage = percentage
     }
     
-    func reset() {
+    func resetValues() {
         billAmount = nil
         tipPercentage = 0.0
-    }
-    
-    func formatBillAmount() {
-        if let amount = Double(billAmountText) {
-            billAmountText = "\(defaultCurrency) \(amount)"
-        }
     }
 }
 

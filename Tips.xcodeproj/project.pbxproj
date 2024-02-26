@@ -13,7 +13,7 @@
 		0272AA6D2B8AC801000869F1 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0272AA6C2B8AC801000869F1 /* Currency.swift */; };
 		0272AA6F2B8AC9A4000869F1 /* Double+toString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0272AA6E2B8AC9A4000869F1 /* Double+toString.swift */; };
 		0272AA712B8ACEA8000869F1 /* LabeledAmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0272AA702B8ACEA8000869F1 /* LabeledAmountView.swift */; };
-		02DE03B12B8AC0E3008FA65A /* tipsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE03B02B8AC0E3008FA65A /* tipsTests.swift */; };
+		0272AA732B8C0EC2000869F1 /* CalculationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0272AA722B8C0EC2000869F1 /* CalculationViewModelTests.swift */; };
 		02DE03BB2B8AC0E3008FA65A /* tipsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE03BA2B8AC0E3008FA65A /* tipsUITests.swift */; };
 		02DE03BD2B8AC0E3008FA65A /* tipsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE03BC2B8AC0E3008FA65A /* tipsUITestsLaunchTests.swift */; };
 		02DE03D22B8AC122008FA65A /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 02DE03CA2B8AC122008FA65A /* Localizable.xcstrings */; };
@@ -48,10 +48,10 @@
 		0272AA6C2B8AC801000869F1 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Currency.swift; path = ../../../Tips/tips/Core/Currency.swift; sourceTree = "<group>"; };
 		0272AA6E2B8AC9A4000869F1 /* Double+toString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Double+toString.swift"; path = "../../../Tips/tips/Core/Double+toString.swift"; sourceTree = "<group>"; };
 		0272AA702B8ACEA8000869F1 /* LabeledAmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LabeledAmountView.swift; path = ../../../Tips/tips/Presentation/LabeledAmountView.swift; sourceTree = "<group>"; };
-		02DE039C2B8AC0E1008FA65A /* tips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tips.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		02DE03AC2B8AC0E3008FA65A /* tipsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tipsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		02DE03B02B8AC0E3008FA65A /* tipsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tipsTests.swift; sourceTree = "<group>"; };
-		02DE03B62B8AC0E3008FA65A /* tipsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tipsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0272AA722B8C0EC2000869F1 /* CalculationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationViewModelTests.swift; sourceTree = "<group>"; };
+		02DE039C2B8AC0E1008FA65A /* Tips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tips.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		02DE03AC2B8AC0E3008FA65A /* TipsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		02DE03B62B8AC0E3008FA65A /* TipsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		02DE03BA2B8AC0E3008FA65A /* tipsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tipsUITests.swift; sourceTree = "<group>"; };
 		02DE03BC2B8AC0E3008FA65A /* tipsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tipsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		02DE03CA2B8AC122008FA65A /* Localizable.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
@@ -120,9 +120,9 @@
 		02DE039D2B8AC0E1008FA65A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				02DE039C2B8AC0E1008FA65A /* tips.app */,
-				02DE03AC2B8AC0E3008FA65A /* tipsTests.xctest */,
-				02DE03B62B8AC0E3008FA65A /* tipsUITests.xctest */,
+				02DE039C2B8AC0E1008FA65A /* Tips.app */,
+				02DE03AC2B8AC0E3008FA65A /* TipsTests.xctest */,
+				02DE03B62B8AC0E3008FA65A /* TipsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,7 +130,7 @@
 		02DE03AF2B8AC0E3008FA65A /* tipsTests */ = {
 			isa = PBXGroup;
 			children = (
-				02DE03B02B8AC0E3008FA65A /* tipsTests.swift */,
+				0272AA722B8C0EC2000869F1 /* CalculationViewModelTests.swift */,
 			);
 			path = tipsTests;
 			sourceTree = "<group>";
@@ -170,9 +170,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		02DE039B2B8AC0E1008FA65A /* tips */ = {
+		02DE039B2B8AC0E1008FA65A /* Tips */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 02DE03C02B8AC0E3008FA65A /* Build configuration list for PBXNativeTarget "tips" */;
+			buildConfigurationList = 02DE03C02B8AC0E3008FA65A /* Build configuration list for PBXNativeTarget "Tips" */;
 			buildPhases = (
 				02DE03982B8AC0E1008FA65A /* Sources */,
 				02DE03992B8AC0E1008FA65A /* Frameworks */,
@@ -182,14 +182,14 @@
 			);
 			dependencies = (
 			);
-			name = tips;
+			name = Tips;
 			productName = tips;
-			productReference = 02DE039C2B8AC0E1008FA65A /* tips.app */;
+			productReference = 02DE039C2B8AC0E1008FA65A /* Tips.app */;
 			productType = "com.apple.product-type.application";
 		};
-		02DE03AB2B8AC0E3008FA65A /* tipsTests */ = {
+		02DE03AB2B8AC0E3008FA65A /* TipsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 02DE03C32B8AC0E3008FA65A /* Build configuration list for PBXNativeTarget "tipsTests" */;
+			buildConfigurationList = 02DE03C32B8AC0E3008FA65A /* Build configuration list for PBXNativeTarget "TipsTests" */;
 			buildPhases = (
 				02DE03A82B8AC0E3008FA65A /* Sources */,
 				02DE03A92B8AC0E3008FA65A /* Frameworks */,
@@ -200,14 +200,14 @@
 			dependencies = (
 				02DE03AE2B8AC0E3008FA65A /* PBXTargetDependency */,
 			);
-			name = tipsTests;
+			name = TipsTests;
 			productName = tipsTests;
-			productReference = 02DE03AC2B8AC0E3008FA65A /* tipsTests.xctest */;
+			productReference = 02DE03AC2B8AC0E3008FA65A /* TipsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		02DE03B52B8AC0E3008FA65A /* tipsUITests */ = {
+		02DE03B52B8AC0E3008FA65A /* TipsUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 02DE03C62B8AC0E3008FA65A /* Build configuration list for PBXNativeTarget "tipsUITests" */;
+			buildConfigurationList = 02DE03C62B8AC0E3008FA65A /* Build configuration list for PBXNativeTarget "TipsUITests" */;
 			buildPhases = (
 				02DE03B22B8AC0E3008FA65A /* Sources */,
 				02DE03B32B8AC0E3008FA65A /* Frameworks */,
@@ -218,9 +218,9 @@
 			dependencies = (
 				02DE03B82B8AC0E3008FA65A /* PBXTargetDependency */,
 			);
-			name = tipsUITests;
+			name = TipsUITests;
 			productName = tipsUITests;
-			productReference = 02DE03B62B8AC0E3008FA65A /* tipsUITests.xctest */;
+			productReference = 02DE03B62B8AC0E3008FA65A /* TipsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -246,7 +246,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 02DE03972B8AC0E1008FA65A /* Build configuration list for PBXProject "tips" */;
+			buildConfigurationList = 02DE03972B8AC0E1008FA65A /* Build configuration list for PBXProject "Tips" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -259,9 +259,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				02DE039B2B8AC0E1008FA65A /* tips */,
-				02DE03AB2B8AC0E3008FA65A /* tipsTests */,
-				02DE03B52B8AC0E3008FA65A /* tipsUITests */,
+				02DE039B2B8AC0E1008FA65A /* Tips */,
+				02DE03AB2B8AC0E3008FA65A /* TipsTests */,
+				02DE03B52B8AC0E3008FA65A /* TipsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -314,7 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02DE03B12B8AC0E3008FA65A /* tipsTests.swift in Sources */,
+				0272AA732B8C0EC2000869F1 /* CalculationViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,12 +332,12 @@
 /* Begin PBXTargetDependency section */
 		02DE03AE2B8AC0E3008FA65A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 02DE039B2B8AC0E1008FA65A /* tips */;
+			target = 02DE039B2B8AC0E1008FA65A /* Tips */;
 			targetProxy = 02DE03AD2B8AC0E3008FA65A /* PBXContainerItemProxy */;
 		};
 		02DE03B82B8AC0E3008FA65A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 02DE039B2B8AC0E1008FA65A /* tips */;
+			target = 02DE039B2B8AC0E1008FA65A /* Tips */;
 			targetProxy = 02DE03B72B8AC0E3008FA65A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -542,7 +542,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tips.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/tips";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tips.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Tips";
 			};
 			name = Debug;
 		};
@@ -562,7 +562,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tips.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/tips";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tips.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Tips";
 			};
 			name = Release;
 		};
@@ -605,7 +605,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		02DE03972B8AC0E1008FA65A /* Build configuration list for PBXProject "tips" */ = {
+		02DE03972B8AC0E1008FA65A /* Build configuration list for PBXProject "Tips" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				02DE03BE2B8AC0E3008FA65A /* Debug */,
@@ -614,7 +614,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		02DE03C02B8AC0E3008FA65A /* Build configuration list for PBXNativeTarget "tips" */ = {
+		02DE03C02B8AC0E3008FA65A /* Build configuration list for PBXNativeTarget "Tips" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				02DE03C12B8AC0E3008FA65A /* Debug */,
@@ -623,7 +623,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		02DE03C32B8AC0E3008FA65A /* Build configuration list for PBXNativeTarget "tipsTests" */ = {
+		02DE03C32B8AC0E3008FA65A /* Build configuration list for PBXNativeTarget "TipsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				02DE03C42B8AC0E3008FA65A /* Debug */,
@@ -632,7 +632,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		02DE03C62B8AC0E3008FA65A /* Build configuration list for PBXNativeTarget "tipsUITests" */ = {
+		02DE03C62B8AC0E3008FA65A /* Build configuration list for PBXNativeTarget "TipsUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				02DE03C72B8AC0E3008FA65A /* Debug */,
