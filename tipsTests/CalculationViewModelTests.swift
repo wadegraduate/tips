@@ -39,11 +39,33 @@ final class CalculationViewModelTests: XCTestCase {
         XCTAssertEqual(sut.tipPercentage, 0.0)
     }
     
+    func test_tipAmount_shouldBeEqual() {
+        sut.billAmount = 100
+        sut.tipPercentage = 20
+       
+        XCTAssertEqual(sut.tipAmount, 20)
+    }
+    
+    func test_billAmountNil_tipAmountShouldBeZero() {
+        sut.billAmount = nil
+        XCTAssertEqual(sut.tipAmount, 0)
+    }
+    
+    func test_billAmountNil_totalAmountWithTipShouldBeZero() {
+        sut.billAmount = nil
+        XCTAssertEqual(sut.totalAmountWithTip, 0)
+    }
+    
     func test_resetValues_shouldReturnTrue() {
         sut.resetValues()
         
         XCTAssertTrue(sut.billAmount == nil)
         XCTAssertTrue(sut.tipPercentage == 0)
+    }
+    
+    func test_selectTipPercentage_shouldReturnEqual() {
+        sut.selectTipPercentage(percentage: 5.50)
+        XCTAssertEqual(sut.tipPercentage, 5.50)
     }
 
 }

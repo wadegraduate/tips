@@ -107,7 +107,7 @@ struct CalculationView: View {
         ScrollView(.horizontal) {
             HStack {
                 Spacer()
-                ForEach(viewModel.tipsPercentage, id: \.self) { percentage in
+                ForEach(viewModel.tipPercentages, id: \.self) { percentage in
                     Button(action: {
                         viewModel.selectTipPercentage(percentage: percentage)
                     }, label: {

@@ -12,7 +12,7 @@ final class CalculationViewModel: ObservableObject {
     @Published var billAmountText: String = "" 
     @Published var billAmount: Double?
     @Published var tipPercentage = 0.0
-    @Published var tipsPercentage: [Double] = [8.0, 10.0, 15.0, 18.0]
+    @Published var tipPercentages: [Double] = [8.0, 10.0, 15.0, 18.0]
     
     var tipAmount: Double {
         if let billAmount = billAmount {
