@@ -22,7 +22,7 @@ jobs:
       - name: Run Tests
         run: |
           xcodebuild test -project Tips.xcodeproj -scheme Tips -destination "platform=iOS Simulator,name=iPhone 14"
-      - uses: kishikawakatsumi/xcresulttool@v1
-        with:
-          path: TestResults.xcresult
-        if: success() || failure()
+#      - uses: kishikawakatsumi/xcresulttool@v1
+#        with:
+#          path: TestResults.xcresult
+#        if: success() || failure()
