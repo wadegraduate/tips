@@ -42,22 +42,18 @@ struct CalculationView: View {
     
     var billinformation: some View {
         Section {
-            TextField(String(localized: "Enter Bill Amount"),
-                      value: $viewModel.billAmount,
-                      format: .currency(code: Locale.current.currency?.identifier ?? "USD"),
-                      prompt: Text(String(localized: "Enter Bill Amount"))
-                .foregroundColor(Color.theme.secondaryGray)
-            )
+            CurrencyTextField(String(localized: "Enter Bill Amount"),
+                              value: $viewModel.billAmount,
+                              currencySymbol: defaultCurrency, 
+                              font: .systemFont(ofSize: 30, weight: .medium),
+                              foregroundColor: .standardText, 
+                              textAlignment: .left,
+                              clearsOnBeginEditing: true)
             .padding()
             .font(.system(size: 30, weight: .medium))
             .frame(height: 60)
             .keyboardType(.decimalPad)
             .listRowBackground(Color.theme.secondaryBackground)
-//            .onChange(of: isFocused) { value in
-//                if value {
-//                    viewModel.formatBillAmount()
-//                }
-//            }
             .toolbar {
                 ToolbarItemGroup(placement: .keyboard) {
                     Spacer()

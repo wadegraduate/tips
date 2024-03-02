@@ -22,6 +22,7 @@
 		02DE03D62B8AC122008FA65A /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE03CF2B8AC122008FA65A /* LaunchView.swift */; };
 		02DE03D82B8AC122008FA65A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE03D12B8AC122008FA65A /* Color.swift */; };
 		02DE03DA2B8AC140008FA65A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02DE03D92B8AC140008FA65A /* Assets.xcassets */; };
+		02E0F52E2B93C88B008FFADF /* CurrencyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E0F52D2B93C88B008FFADF /* CurrencyTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		02DE03CF2B8AC122008FA65A /* LaunchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		02DE03D12B8AC122008FA65A /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		02DE03D92B8AC140008FA65A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		02E0F52D2B93C88B008FFADF /* CurrencyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				0272AA652B8AC716000869F1 /* CalculationView.swift */,
 				0272AA672B8AC721000869F1 /* CalculationViewModel.swift */,
 				0272AA702B8ACEA8000869F1 /* LabeledAmountView.swift */,
+				02E0F52D2B93C88B008FFADF /* CurrencyTextField.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				0272AA682B8AC721000869F1 /* CalculationViewModel.swift in Sources */,
 				0272AA662B8AC716000869F1 /* CalculationView.swift in Sources */,
 				0272AA6D2B8AC801000869F1 /* Currency.swift in Sources */,
+				02E0F52E2B93C88B008FFADF /* CurrencyTextField.swift in Sources */,
 				02DE03D62B8AC122008FA65A /* LaunchView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
