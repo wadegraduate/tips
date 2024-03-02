@@ -46,7 +46,7 @@ struct CalculationView: View {
                               value: $viewModel.billAmount,
                               currencySymbol: defaultCurrency, 
                               font: .systemFont(ofSize: 30, weight: .medium),
-                              foregroundColor: UIColor(.standardText),
+                              foregroundColor: UIColor(Color.standardText),
                               textAlignment: .left,
                               clearsOnBeginEditing: true)
             .padding()
