@@ -22,9 +22,9 @@ jobs:
         run: |
           xcodebuild test -project Tips.xcodeproj -scheme Tips -resultBundlePath TestResults -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 14"
 
-      - name: Process Test Results
-        uses: kishikawakatsumi/xcresulttool@v1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          path: TestResults.xcresult
-        if: ${{ success() || failure() }}
+      # - name: Process Test Results
+      #   uses: kishikawakatsumi/xcresulttool@v1
+      #   with:
+      #     token: ${{ secrets.GITHUB_TOKEN }}
+      #     path: TestResults.xcresult
+      #   if: ${{ success() || failure() }}
