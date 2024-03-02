@@ -26,7 +26,7 @@ struct CalculationView: View {
         NavigationStack {
             Form {
                 billTotals
-                billinformation
+                billInformation
                 tipAmount
                 reset
             }
@@ -40,13 +40,13 @@ struct CalculationView: View {
     }
     
     
-    var billinformation: some View {
+    var billInformation: some View {
         Section {
             CurrencyTextField(String(localized: "Enter Bill Amount"),
                               value: $viewModel.billAmount,
                               currencySymbol: defaultCurrency, 
                               font: .systemFont(ofSize: 30, weight: .medium),
-                              foregroundColor: UIColor(Color.standardText),
+                              //foregroundColor: UIColor(Color.standardText),
                               textAlignment: .left,
                               clearsOnBeginEditing: true)
             .padding()
