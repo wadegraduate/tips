@@ -14,6 +14,14 @@
 		0272AA6F2B8AC9A4000869F1 /* Double+toString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0272AA6E2B8AC9A4000869F1 /* Double+toString.swift */; };
 		0272AA712B8ACEA8000869F1 /* LabeledAmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0272AA702B8ACEA8000869F1 /* LabeledAmountView.swift */; };
 		0272AA732B8C0EC2000869F1 /* CalculationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0272AA722B8C0EC2000869F1 /* CalculationViewModelTests.swift */; };
+		02ABE0582BB75CE300FB27A0 /* MainTabBarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABE0552BB75CE300FB27A0 /* MainTabBarItemView.swift */; };
+		02ABE0592BB75CE300FB27A0 /* MainTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABE0562BB75CE300FB27A0 /* MainTabBarView.swift */; };
+		02ABE05A2BB75CE300FB27A0 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABE0572BB75CE300FB27A0 /* Tab.swift */; };
+		02ABE05E2BB75FAB00FB27A0 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABE05D2BB75FAB00FB27A0 /* TodoListView.swift */; };
+		02ABE0602BB75FEE00FB27A0 /* TaskItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABE05F2BB75FEE00FB27A0 /* TaskItem.swift */; };
+		02ABE0622BB7628200FB27A0 /* TodoListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABE0612BB7628200FB27A0 /* TodoListModel.swift */; };
+		02ABE0642BB7674400FB27A0 /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABE0632BB7674400FB27A0 /* TaskRow.swift */; };
+		02ABE0662BB7AEC800FB27A0 /* TextFieldSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABE0652BB7AEC800FB27A0 /* TextFieldSheetView.swift */; };
 		02DE03BB2B8AC0E3008FA65A /* tipsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE03BA2B8AC0E3008FA65A /* tipsUITests.swift */; };
 		02DE03BD2B8AC0E3008FA65A /* tipsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE03BC2B8AC0E3008FA65A /* tipsUITestsLaunchTests.swift */; };
 		02DE03D22B8AC122008FA65A /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 02DE03CA2B8AC122008FA65A /* Localizable.xcstrings */; };
@@ -43,16 +51,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0272AA652B8AC716000869F1 /* CalculationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CalculationView.swift; path = ../../../Tips/tips/Presentation/CalculationView.swift; sourceTree = "<group>"; };
-		0272AA672B8AC721000869F1 /* CalculationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CalculationViewModel.swift; path = ../../../Tips/tips/Presentation/CalculationViewModel.swift; sourceTree = "<group>"; };
+		0272AA652B8AC716000869F1 /* CalculationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationView.swift; sourceTree = "<group>"; };
+		0272AA672B8AC721000869F1 /* CalculationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationViewModel.swift; sourceTree = "<group>"; };
 		0272AA6A2B8AC756000869F1 /* View+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "View+Keyboard.swift"; path = "../../../Tips/tips/Core/View+Keyboard.swift"; sourceTree = "<group>"; };
 		0272AA6C2B8AC801000869F1 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Currency.swift; path = ../../../Tips/tips/Core/Currency.swift; sourceTree = "<group>"; };
 		0272AA6E2B8AC9A4000869F1 /* Double+toString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Double+toString.swift"; path = "../../../Tips/tips/Core/Double+toString.swift"; sourceTree = "<group>"; };
-		0272AA702B8ACEA8000869F1 /* LabeledAmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LabeledAmountView.swift; path = ../../../Tips/tips/Presentation/LabeledAmountView.swift; sourceTree = "<group>"; };
+		0272AA702B8ACEA8000869F1 /* LabeledAmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledAmountView.swift; sourceTree = "<group>"; };
 		0272AA722B8C0EC2000869F1 /* CalculationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationViewModelTests.swift; sourceTree = "<group>"; };
-		02DE039C2B8AC0E1008FA65A /* Tips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tips.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		02DE03AC2B8AC0E3008FA65A /* TipsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		02DE03B62B8AC0E3008FA65A /* TipsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		02ABE0552BB75CE300FB27A0 /* MainTabBarItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarItemView.swift; sourceTree = "<group>"; };
+		02ABE0562BB75CE300FB27A0 /* MainTabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarView.swift; sourceTree = "<group>"; };
+		02ABE0572BB75CE300FB27A0 /* Tab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		02ABE05D2BB75FAB00FB27A0 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
+		02ABE05F2BB75FEE00FB27A0 /* TaskItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItem.swift; sourceTree = "<group>"; };
+		02ABE0612BB7628200FB27A0 /* TodoListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListModel.swift; sourceTree = "<group>"; };
+		02ABE0632BB7674400FB27A0 /* TaskRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
+		02ABE0652BB7AEC800FB27A0 /* TextFieldSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldSheetView.swift; sourceTree = "<group>"; };
+		02C44A562B95893600C1E4BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = Tips/Info.plist; sourceTree = "<group>"; };
+		02DE039C2B8AC0E1008FA65A /* TipGenius.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipGenius.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		02DE03AC2B8AC0E3008FA65A /* TipGeniusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipGeniusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		02DE03B62B8AC0E3008FA65A /* TipGeniusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipGeniusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		02DE03BA2B8AC0E3008FA65A /* tipsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tipsUITests.swift; sourceTree = "<group>"; };
 		02DE03BC2B8AC0E3008FA65A /* tipsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tipsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		02DE03CA2B8AC122008FA65A /* Localizable.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
@@ -92,10 +109,8 @@
 		0272AA642B8AC70A000869F1 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				0272AA652B8AC716000869F1 /* CalculationView.swift */,
-				0272AA672B8AC721000869F1 /* CalculationViewModel.swift */,
-				0272AA702B8ACEA8000869F1 /* LabeledAmountView.swift */,
-				02E0F52D2B93C88B008FFADF /* CurrencyTextField.swift */,
+				02ABE05C2BB75F8A00FB27A0 /* To-do List */,
+				02ABE05B2BB75F7D00FB27A0 /* Calculation */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -110,9 +125,43 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
+		02ABE0542BB75CE300FB27A0 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				02ABE0552BB75CE300FB27A0 /* MainTabBarItemView.swift */,
+				02ABE0562BB75CE300FB27A0 /* MainTabBarView.swift */,
+				02ABE0572BB75CE300FB27A0 /* Tab.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		02ABE05B2BB75F7D00FB27A0 /* Calculation */ = {
+			isa = PBXGroup;
+			children = (
+				0272AA652B8AC716000869F1 /* CalculationView.swift */,
+				0272AA672B8AC721000869F1 /* CalculationViewModel.swift */,
+				0272AA702B8ACEA8000869F1 /* LabeledAmountView.swift */,
+				02E0F52D2B93C88B008FFADF /* CurrencyTextField.swift */,
+			);
+			path = Calculation;
+			sourceTree = "<group>";
+		};
+		02ABE05C2BB75F8A00FB27A0 /* To-do List */ = {
+			isa = PBXGroup;
+			children = (
+				02ABE05D2BB75FAB00FB27A0 /* TodoListView.swift */,
+				02ABE05F2BB75FEE00FB27A0 /* TaskItem.swift */,
+				02ABE0612BB7628200FB27A0 /* TodoListModel.swift */,
+				02ABE0632BB7674400FB27A0 /* TaskRow.swift */,
+				02ABE0652BB7AEC800FB27A0 /* TextFieldSheetView.swift */,
+			);
+			path = "To-do List";
+			sourceTree = "<group>";
+		};
 		02DE03932B8AC0E1008FA65A = {
 			isa = PBXGroup;
 			children = (
+				02C44A562B95893600C1E4BC /* Info.plist */,
 				02DE03C92B8AC122008FA65A /* tips */,
 				02DE03AF2B8AC0E3008FA65A /* TipsTests */,
 				02DE03B92B8AC0E3008FA65A /* TipsUITests */,
@@ -123,9 +172,9 @@
 		02DE039D2B8AC0E1008FA65A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				02DE039C2B8AC0E1008FA65A /* Tips.app */,
-				02DE03AC2B8AC0E3008FA65A /* TipsTests.xctest */,
-				02DE03B62B8AC0E3008FA65A /* TipsUITests.xctest */,
+				02DE039C2B8AC0E1008FA65A /* TipGenius.app */,
+				02DE03AC2B8AC0E3008FA65A /* TipGeniusTests.xctest */,
+				02DE03B62B8AC0E3008FA65A /* TipGeniusUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,6 +199,7 @@
 		02DE03C92B8AC122008FA65A /* tips */ = {
 			isa = PBXGroup;
 			children = (
+				02ABE0542BB75CE300FB27A0 /* Tabbar */,
 				0272AA692B8AC724000869F1 /* Core */,
 				0272AA642B8AC70A000869F1 /* Presentation */,
 				02DE03D92B8AC140008FA65A /* Assets.xcassets */,
@@ -173,9 +223,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		02DE039B2B8AC0E1008FA65A /* Tips */ = {
+		02DE039B2B8AC0E1008FA65A /* TipGenius */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 02DE03C02B8AC0E3008FA65A /* Build configuration list for PBXNativeTarget "Tips" */;
+			buildConfigurationList = 02DE03C02B8AC0E3008FA65A /* Build configuration list for PBXNativeTarget "TipGenius" */;
 			buildPhases = (
 				02DE03982B8AC0E1008FA65A /* Sources */,
 				02DE03992B8AC0E1008FA65A /* Frameworks */,
@@ -185,14 +235,14 @@
 			);
 			dependencies = (
 			);
-			name = Tips;
+			name = TipGenius;
 			productName = tips;
-			productReference = 02DE039C2B8AC0E1008FA65A /* Tips.app */;
+			productReference = 02DE039C2B8AC0E1008FA65A /* TipGenius.app */;
 			productType = "com.apple.product-type.application";
 		};
-		02DE03AB2B8AC0E3008FA65A /* TipsTests */ = {
+		02DE03AB2B8AC0E3008FA65A /* TipGeniusTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 02DE03C32B8AC0E3008FA65A /* Build configuration list for PBXNativeTarget "TipsTests" */;
+			buildConfigurationList = 02DE03C32B8AC0E3008FA65A /* Build configuration list for PBXNativeTarget "TipGeniusTests" */;
 			buildPhases = (
 				02DE03A82B8AC0E3008FA65A /* Sources */,
 				02DE03A92B8AC0E3008FA65A /* Frameworks */,
@@ -203,14 +253,14 @@
 			dependencies = (
 				02DE03AE2B8AC0E3008FA65A /* PBXTargetDependency */,
 			);
-			name = TipsTests;
+			name = TipGeniusTests;
 			productName = tipsTests;
-			productReference = 02DE03AC2B8AC0E3008FA65A /* TipsTests.xctest */;
+			productReference = 02DE03AC2B8AC0E3008FA65A /* TipGeniusTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		02DE03B52B8AC0E3008FA65A /* TipsUITests */ = {
+		02DE03B52B8AC0E3008FA65A /* TipGeniusUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 02DE03C62B8AC0E3008FA65A /* Build configuration list for PBXNativeTarget "TipsUITests" */;
+			buildConfigurationList = 02DE03C62B8AC0E3008FA65A /* Build configuration list for PBXNativeTarget "TipGeniusUITests" */;
 			buildPhases = (
 				02DE03B22B8AC0E3008FA65A /* Sources */,
 				02DE03B32B8AC0E3008FA65A /* Frameworks */,
@@ -221,9 +271,9 @@
 			dependencies = (
 				02DE03B82B8AC0E3008FA65A /* PBXTargetDependency */,
 			);
-			name = TipsUITests;
+			name = TipGeniusUITests;
 			productName = tipsUITests;
-			productReference = 02DE03B62B8AC0E3008FA65A /* TipsUITests.xctest */;
+			productReference = 02DE03B62B8AC0E3008FA65A /* TipGeniusUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -249,7 +299,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 02DE03972B8AC0E1008FA65A /* Build configuration list for PBXProject "Tips" */;
+			buildConfigurationList = 02DE03972B8AC0E1008FA65A /* Build configuration list for PBXProject "TipGenius" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -262,9 +312,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				02DE039B2B8AC0E1008FA65A /* Tips */,
-				02DE03AB2B8AC0E3008FA65A /* TipsTests */,
-				02DE03B52B8AC0E3008FA65A /* TipsUITests */,
+				02DE039B2B8AC0E1008FA65A /* TipGenius */,
+				02DE03AB2B8AC0E3008FA65A /* TipGeniusTests */,
+				02DE03B52B8AC0E3008FA65A /* TipGeniusUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -302,11 +352,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				0272AA6F2B8AC9A4000869F1 /* Double+toString.swift in Sources */,
+				02ABE0622BB7628200FB27A0 /* TodoListModel.swift in Sources */,
+				02ABE0662BB7AEC800FB27A0 /* TextFieldSheetView.swift in Sources */,
+				02ABE0642BB7674400FB27A0 /* TaskRow.swift in Sources */,
+				02ABE0602BB75FEE00FB27A0 /* TaskItem.swift in Sources */,
+				02ABE0582BB75CE300FB27A0 /* MainTabBarItemView.swift in Sources */,
 				02DE03D32B8AC122008FA65A /* TipsApp.swift in Sources */,
 				0272AA712B8ACEA8000869F1 /* LabeledAmountView.swift in Sources */,
+				02ABE05E2BB75FAB00FB27A0 /* TodoListView.swift in Sources */,
 				0272AA6B2B8AC756000869F1 /* View+Keyboard.swift in Sources */,
 				02DE03D82B8AC122008FA65A /* Color.swift in Sources */,
 				0272AA682B8AC721000869F1 /* CalculationViewModel.swift in Sources */,
+				02ABE05A2BB75CE300FB27A0 /* Tab.swift in Sources */,
+				02ABE0592BB75CE300FB27A0 /* MainTabBarView.swift in Sources */,
 				0272AA662B8AC716000869F1 /* CalculationView.swift in Sources */,
 				0272AA6D2B8AC801000869F1 /* Currency.swift in Sources */,
 				02E0F52E2B93C88B008FFADF /* CurrencyTextField.swift in Sources */,
@@ -336,12 +394,12 @@
 /* Begin PBXTargetDependency section */
 		02DE03AE2B8AC0E3008FA65A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 02DE039B2B8AC0E1008FA65A /* Tips */;
+			target = 02DE039B2B8AC0E1008FA65A /* TipGenius */;
 			targetProxy = 02DE03AD2B8AC0E3008FA65A /* PBXContainerItemProxy */;
 		};
 		02DE03B82B8AC0E3008FA65A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 02DE039B2B8AC0E1008FA65A /* Tips */;
+			target = 02DE039B2B8AC0E1008FA65A /* TipGenius */;
 			targetProxy = 02DE03B72B8AC0E3008FA65A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -471,13 +529,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 20240303;
 				DEVELOPMENT_ASSET_PATHS = "\"tips/Preview Content\"";
 				DEVELOPMENT_TEAM = 8ZPPH6YVK2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Tips/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TipGenius;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -488,7 +550,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = wade.chan.personal.com.tips;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -503,13 +565,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 20240303;
 				DEVELOPMENT_ASSET_PATHS = "\"tips/Preview Content\"";
 				DEVELOPMENT_TEAM = 8ZPPH6YVK2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Tips/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TipGenius;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -520,7 +586,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = wade.chan.personal.com.tips;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -546,7 +612,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tips.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Tips";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TipGenius.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TipGenius";
 			};
 			name = Debug;
 		};
@@ -566,7 +632,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tips.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Tips";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TipGenius.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TipGenius";
 			};
 			name = Release;
 		};
@@ -611,7 +677,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		02DE03972B8AC0E1008FA65A /* Build configuration list for PBXProject "Tips" */ = {
+		02DE03972B8AC0E1008FA65A /* Build configuration list for PBXProject "TipGenius" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				02DE03BE2B8AC0E3008FA65A /* Debug */,
@@ -620,7 +686,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		02DE03C02B8AC0E3008FA65A /* Build configuration list for PBXNativeTarget "Tips" */ = {
+		02DE03C02B8AC0E3008FA65A /* Build configuration list for PBXNativeTarget "TipGenius" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				02DE03C12B8AC0E3008FA65A /* Debug */,
@@ -629,7 +695,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		02DE03C32B8AC0E3008FA65A /* Build configuration list for PBXNativeTarget "TipsTests" */ = {
+		02DE03C32B8AC0E3008FA65A /* Build configuration list for PBXNativeTarget "TipGeniusTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				02DE03C42B8AC0E3008FA65A /* Debug */,
@@ -638,7 +704,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		02DE03C62B8AC0E3008FA65A /* Build configuration list for PBXNativeTarget "TipsUITests" */ = {
+		02DE03C62B8AC0E3008FA65A /* Build configuration list for PBXNativeTarget "TipGeniusUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				02DE03C72B8AC0E3008FA65A /* Debug */,

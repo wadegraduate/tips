@@ -4,10 +4,16 @@
     "%.0f%%" : {
 
     },
+    "Add" : {
+
+    },
     "Bill Information" : {
 
     },
     "Bill Totals" : {
+
+    },
+    "Cancel" : {
 
     },
     "Done" : {
@@ -31,10 +37,19 @@
     "Tip Amount" : {
 
     },
+    "Tip Calculator" : {
+
+    },
     "Tip Percentage Selection" : {
 
     },
     "Tips" : {
+
+    },
+    "To-do" : {
+
+    },
+    "To-Do List" : {
 
     },
     "Total With Tip" : {

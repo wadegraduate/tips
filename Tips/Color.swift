@@ -19,5 +19,7 @@ struct ColorTheme {
     let standardText = Color("standardText")
     let primaryGray = Color(#colorLiteral(red: 0.6980392157, green: 0.7176470588, blue: 0.7607843137, alpha: 1))
     let secondaryGray = Color(#colorLiteral(red: 0.5764705882, green: 0.5882352941, blue: 0.6392156863, alpha: 1))
+    let tabbarColor = Color("tabbarColor")
+    let sheetBackground = Color("sheetBackground")
     let red = Color(#colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1))
 }

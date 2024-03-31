@@ -15,7 +15,7 @@ struct TipsApp: App {
     var body: some Scene {
         WindowGroup {
             if isActive {
-                CalculationView()
+                MainTabBarView()
             }else {
                 LaunchView(isActive: $isActive)
             }

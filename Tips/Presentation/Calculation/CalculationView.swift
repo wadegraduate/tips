@@ -47,8 +47,7 @@ struct CalculationView: View {
                               currencySymbol: defaultCurrency, 
                               font: .systemFont(ofSize: 30, weight: .medium),
                               //foregroundColor: UIColor(Color.standardText),
-                              textAlignment: .left,
-                              clearsOnBeginEditing: true)
+                              textAlignment: .left)
             .padding()
             .font(.system(size: 30, weight: .medium))
             .frame(height: 60)
