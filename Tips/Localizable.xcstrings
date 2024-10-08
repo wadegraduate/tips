@@ -4,7 +4,13 @@
     "%.0f%%" : {
 
     },
+    "%@ will be permanently deleted?" : {
+
+    },
     "Add" : {
+
+    },
+    "Add your new item" : {
 
     },
     "Bill Information" : {
@@ -16,10 +22,22 @@
     "Cancel" : {
 
     },
+    "Confirm" : {
+
+    },
+    "Delete" : {
+
+    },
     "Done" : {
 
     },
+    "Due Date" : {
+
+    },
     "Enter Bill Amount" : {
+
+    },
+    "Note" : {
 
     },
     "Reset" : {

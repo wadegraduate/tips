@@ -20,7 +20,7 @@ struct TextFieldSheetView: View {
     @Binding var isShowingModal: Bool
     @FocusState private var focusedField: Field?
     
-    var addTask: (TaskTitle) -> Void
+    var addTaskAction: (TaskTitle) -> Void
     var placeholderText: String = "Enter your text"
     
     var body: some View {
@@ -50,13 +50,13 @@ struct TextFieldSheetView: View {
                             
                 HStack(alignment: .center) {
                     Spacer()
-                    Button(String(localized: "Add")) {
-                        addTask(text)
+                    Button(String(localized: "Cancel")) {
                         text = ""
                         isShowingModal = false
                     }
                     Spacer()
-                    Button(String(localized: "Cancel")) {
+                    Button(String(localized: "Add")) {
+                        addTaskAction(text)
                         text = ""
                         isShowingModal = false
                     }

@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import Tips
+@testable import TipGenius
 
 final class CalculationViewModelTests: XCTestCase {
 

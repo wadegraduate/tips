@@ -19,7 +19,6 @@ struct MainTabBarItemView: View {
                 .frame(width: 24, height:24)
             Text(tab.name)
                 .font(.system(size: 12, weight: .medium))
-//                .foregroundStyle(isSelected ? Color.theme.primaryGreen : Color.theme.neutralSolidWhite)
         })
     }
 }

@@ -10,7 +10,9 @@ import SwiftUI
 
 struct TaskRow: View {
     @Binding var task: TaskItem
-
+    @Binding var showConfirm: Bool
+    let deleteAction: () -> Void
+    
     var body: some View {
         HStack {
             Button(action: {
@@ -20,11 +22,11 @@ struct TaskRow: View {
                     .foregroundColor(task.isCompleted ? .green : .gray)
             }
             .buttonStyle(BorderlessButtonStyle())
-
+            
             Text(task.title)
-
+            
             Spacer()
-
+            
             Button(action: {
                 task.isStarred.toggle()
             }) {
@@ -34,12 +36,22 @@ struct TaskRow: View {
             .buttonStyle(BorderlessButtonStyle())
         }
         .frame(minHeight: 40)
-        .listRowBackground(Color.theme.secondaryBackground)
-        
+        .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+            Button {
+                showConfirm = true
+            } label: {
+                Label("Delete", systemImage: "trash")
+            }
+            .tint(.red)
+        }
+        .confirmationDialog("\(task.title) will be permanently deleted?", isPresented: $showConfirm, titleVisibility: .visible) {
+            Button("Confirm", role: .destructive, action: deleteAction)
+            Button("Cancel", role: .cancel) {}
+        }
     }
 }
 
 
 #Preview {
-    TaskRow(task: .constant(TaskItem(title: "Task", isCompleted: true, isStarred: true)))
+    TaskRow(task: .constant(TaskItem(title: "Task", isCompleted: true, isStarred: true)), showConfirm: .constant(false), deleteAction: {})
 }
