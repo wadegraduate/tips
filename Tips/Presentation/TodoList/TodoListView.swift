@@ -16,7 +16,7 @@ struct TodoListView: View {
     @State private var showConfirm = false
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ZStack(alignment: .bottomTrailing) {
                 Color.theme.background
                     .edgesIgnoringSafeArea(.all)
@@ -32,7 +32,10 @@ struct TodoListView: View {
                         List {
                             ForEach(model.tasks.indices, id: \.self) { index in
                                 ZStack {
-                                    NavigationLink(destination: TaskDetailView(task: $model.tasks[index])) {
+                                    // This is to hide arrow
+                                    NavigationLink(destination:  TaskDetailView(task: $model.tasks[index], onEditAction: {
+                                        model.editTask(at: index)
+                                    })) {
                                         EmptyView()
                                     }
                                     .opacity(0.0)

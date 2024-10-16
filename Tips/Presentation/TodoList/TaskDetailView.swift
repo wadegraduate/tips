@@ -26,10 +26,10 @@ struct TaskDetailRowView: View {
 
 struct TaskDetailView: View {
     
-    @State private var birthDate = Date()
+    @State private var taskCreationDate = Date()
     @Binding var task: TaskItem
     
-    var saveTaskAction: (() -> Void)?
+    var onEditAction: (() -> Void)?
     
     var body: some View {
         VStack {
@@ -40,9 +40,12 @@ struct TaskDetailView: View {
                     TaskDetailRowView(text: "Add Due Date", systemImage: "calendar")
                     TaskDetailRowView(text: "Repeat", systemImage: "arrow.triangle.2.circlepath")
                     TaskDetailRowView(text: "Add File", systemImage: "paperclip")
-                    DatePicker("Due Date", selection: $birthDate)
-                        .listRowBackground(Color.theme.secondaryBackground)
-                        .frame(height: 40)
+                    DatePicker("Created on",
+                               selection: $taskCreationDate,
+                               displayedComponents: [.date]
+                    )
+                    .listRowBackground(Color.theme.secondaryBackground)
+                    .frame(height: 40)
                 }
                 
                 Section {
@@ -57,11 +60,11 @@ struct TaskDetailView: View {
         .background(Color.theme.background)
         .scrollContentBackground(.hidden)
         .navigationBarTitleDisplayMode(.inline)
-        .navigationBarItems(trailing: Button(action: {
-           
-        }) {
-            Image(systemName: "square.and.arrow.down")
-        })
+//        .navigationBarItems(trailing: Button(action: {
+//           
+//        }) {
+//            Image(systemName: "square.and.arrow.down")
+//        })
     }
     
     
@@ -74,10 +77,14 @@ struct TaskDetailView: View {
                     .foregroundColor(task.isCompleted ? .green : .gray)
             }
             .buttonStyle(BorderlessButtonStyle())
-            Text(task.title)
-                .font(.system(size: 25, weight: .medium))
-            Spacer()
             
+            TextField("", text: $task.title)
+                .font(.system(size: 25, weight: .medium))
+                .onChange(of: task.title) { _ in
+                    onEditAction?()
+                }
+        
+            Spacer()
             Button(action: {
                 task.isStarred.toggle()
             }, label: {
@@ -101,13 +108,11 @@ struct TaskDetailView: View {
             .background(.clear)
             .listRowBackground(Color.theme.secondaryBackground)
     }
-    
-    
 }
 
 #Preview {
     NavigationView {
         TaskDetailView(task: .constant(TaskItem(title: "Test", isCompleted: false, isStarred: false))
-                       , saveTaskAction: nil)
+                       , onEditAction: nil)
     }
 }

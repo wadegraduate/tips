@@ -8,7 +8,6 @@
 import Foundation
 import SwiftUI
 
-
 extension View {
     /// Dismisses the keyboard if it is currently displaying.
     func hideKeyboard() {

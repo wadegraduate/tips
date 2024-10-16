@@ -8,20 +8,33 @@
 import Foundation
 import RealmSwift
 
-//class TaskItem: Object, Identifiable {
-//    @Persisted(primaryKey: true) var id: ObjectId
-//    @Persisted var title: String
-//    @Persisted var isCompleted: Bool
-//    @Persisted var isStarred: Bool
-//    @Persisted var dueDate: Date
-//    @Persisted var note: String?
-//}
+class TaskItemObject: Object, Identifiable {
+    @Persisted(primaryKey: true) var id: ObjectId
+    @Persisted var title: String
+    @Persisted var isCompleted: Bool
+    @Persisted var isStarred: Bool
+    @Persisted var dueDate: Date
+    @Persisted var note: String?
+}
 
 
-struct TaskItem {
+struct TaskItem: Hashable {
+    var id: String = UUID().uuidString
     var title: String
     var isCompleted: Bool
     var isStarred: Bool
     //var dueDate: Date?
     var note: String?
+    
+}
+
+extension TaskItem {
+    
+    init(taskObject: TaskItemObject) {
+        self.id = taskObject.id.stringValue
+        self.title = taskObject.title
+        self.isCompleted = taskObject.isCompleted
+        self.isStarred = taskObject.isStarred
+        self.note = taskObject.note
+    }
 }

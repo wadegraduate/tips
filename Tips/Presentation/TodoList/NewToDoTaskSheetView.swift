@@ -17,13 +17,25 @@ struct NewToDoTaskSheetView: View {
     @Binding var text: String
     @Binding var isShowingModal: Bool
     @FocusState private var focusedField: Field?
+    @State private var taskCreationDate = Date()
     
     var addTaskAction: (TaskTitle) -> Void
     var placeholderText: String = "Enter your text"
     
     var body: some View {
         NavigationView{
-            VStack {
+            VStack(alignment: .leading) {
+                Divider()
+                HStack {
+                    Image(systemName: "calendar.circle")
+                        .resizable()
+                        .foregroundStyle(Color.iconTint)
+                        .frame(width: 35, height: 35)
+                    DatePicker("", selection: $taskCreationDate)
+                }
+                .padding()
+                Divider()
+                
                 if text.isEmpty {
                     TextField(placeholderText, text: $text)
                         //.frame(height: 150, alignment: .topLeading)
@@ -63,6 +75,7 @@ struct NewToDoTaskSheetView: View {
                 isShowingModal = false
                 } label: {
                     Image(systemName: "xmark")
+                        .foregroundColor(Color.iconTint)
                 }
                 .foregroundStyle(.white)
             )

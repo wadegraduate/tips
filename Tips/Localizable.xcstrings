@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
     "%.0f%%" : {
 
     },
@@ -8,6 +11,9 @@
 
     },
     "Add" : {
+
+    },
+    "Add a new task" : {
 
     },
     "Add your new item" : {
@@ -25,22 +31,28 @@
     "Confirm" : {
 
     },
+    "Created on" : {
+
+    },
     "Delete" : {
 
     },
     "Done" : {
 
     },
-    "Due Date" : {
+    "Enter Bill Amount" : {
 
     },
-    "Enter Bill Amount" : {
+    "Label" : {
 
     },
     "Note" : {
 
     },
     "Reset" : {
+
+    },
+    "Save" : {
 
     },
     "Selects the Tip Percentage" : {
