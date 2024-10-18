@@ -12,7 +12,7 @@ import RealmSwift
 class TodoListModel: ObservableObject {
     
     @ObservedResults(TaskItemObject.self) var storedTaskItems
-    @Published var tasks: [TaskItem] = []
+    @Published var tasks: [Task] = []
     private var token: NotificationToken?
     
     let useCase: TodoListUseCase
@@ -28,7 +28,7 @@ class TodoListModel: ObservableObject {
             let results = realm.objects(TaskItemObject.self)
             
             token = results.observe({ [weak self] changes in
-                self?.tasks = results.map(TaskItem.init)
+                self?.tasks = results.map(Task.init)
             })
         } catch let error {
             print(error.localizedDescription)
@@ -45,10 +45,10 @@ class TodoListModel: ObservableObject {
         $storedTaskItems.append(task)
     }
     
-    func deleteTask(at index: Int) {
+    func deleteTask(at task: Task) {
         do {
             let realm = try Realm()
-            let objectId = try ObjectId(string: tasks[index].id)
+            let objectId = try ObjectId(string: task.id)
             if let object = realm.object(ofType: TaskItemObject.self, forPrimaryKey: objectId) {
                 try realm.write {
                     realm.delete(object)
@@ -59,20 +59,51 @@ class TodoListModel: ObservableObject {
         }
     }
     
-    func editTask(at index: Int) {
+    func editTask(at task: Task) {
         do {
             let realm = try Realm()
-            let objectId = try ObjectId(string: tasks[index].id)
+            let objectId = try ObjectId(string: task.id)
             if let object = realm.object(ofType: TaskItemObject.self, forPrimaryKey: objectId) {
                 try realm.write {
-                    object.title = tasks[index].title
-                    object.isCompleted = tasks[index].isCompleted
-                    object.isStarred = tasks[index].isStarred
+                    object.title = task.title
+                    object.isCompleted = task.isCompleted
+                    object.isStarred = task.isStarred
                 }
             }
         } catch let error {
             print(error)
         }
     }
+    
+    
+//    func deleteTask(at index: Int) {
+//        do {
+//            let realm = try Realm()
+//            let objectId = try ObjectId(string: tasks[index].id)
+//            if let object = realm.object(ofType: TaskItemObject.self, forPrimaryKey: objectId) {
+//                try realm.write {
+//                    realm.delete(object)
+//                }
+//            }
+//        } catch let error {
+//            print(error)
+//        }
+//    }
+//    
+//    func editTask(at index: Int) {
+//        do {
+//            let realm = try Realm()
+//            let objectId = try ObjectId(string: tasks[index].id)
+//            if let object = realm.object(ofType: TaskItemObject.self, forPrimaryKey: objectId) {
+//                try realm.write {
+//                    object.title = tasks[index].title
+//                    object.isCompleted = tasks[index].isCompleted
+//                    object.isStarred = tasks[index].isStarred
+//                }
+//            }
+//        } catch let error {
+//            print(error)
+//        }
+//    }
     
 }

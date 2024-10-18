@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct TaskRow: View {
-    @Binding var task: TaskItem
+    @Binding var task: Task
     @Binding var showConfirm: Bool
     let deleteAction: () -> Void
     
@@ -53,5 +53,5 @@ struct TaskRow: View {
 
 
 #Preview {
-    TaskRow(task: .constant(TaskItem(title: "Task", isCompleted: true, isStarred: true)), showConfirm: .constant(false), deleteAction: {})
+    TaskRow(task: .constant(.sampleData), showConfirm: .constant(false), deleteAction: {})
 }

@@ -29,20 +29,18 @@ struct TodoListView: View {
                                 .position(x: geometry.size.width / 2, y: geometry.size.height / 2)
                         }
                     } else {
-                        List {
-                            ForEach(model.tasks.indices, id: \.self) { index in
-                                ZStack {
-                                    // This is to hide arrow
-                                    NavigationLink(destination:  TaskDetailView(task: $model.tasks[index], onEditAction: {
-                                        model.editTask(at: index)
-                                    })) {
-                                        EmptyView()
-                                    }
-                                    .opacity(0.0)
-                                    .buttonStyle(.plain)
-                                    TaskRow(task: $model.tasks[index], showConfirm: $showConfirm) {
-                                        model.deleteTask(at: index)
-                                    }
+                        List($model.tasks) { $task in
+                            ZStack {
+                                // This is to hide arrow
+                                NavigationLink(destination:  TaskDetailView(task: $task, onEditAction: {
+                                    model.editTask(at: task)
+                                })) {
+                                    EmptyView()
+                                }
+                                .opacity(0.0)
+                                .buttonStyle(.plain)
+                                TaskRow(task: $task, showConfirm: $showConfirm) {
+                                    model.deleteTask(at: task)
                                 }
                             }
                             .listRowBackground(Color.theme.secondaryBackground)

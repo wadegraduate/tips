@@ -23,7 +23,7 @@
 		02ABE0592BB75CE300FB27A0 /* MainTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABE0562BB75CE300FB27A0 /* MainTabBarView.swift */; };
 		02ABE05A2BB75CE300FB27A0 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABE0572BB75CE300FB27A0 /* Tab.swift */; };
 		02ABE05E2BB75FAB00FB27A0 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABE05D2BB75FAB00FB27A0 /* TodoListView.swift */; };
-		02ABE0602BB75FEE00FB27A0 /* TaskItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABE05F2BB75FEE00FB27A0 /* TaskItem.swift */; };
+		02ABE0602BB75FEE00FB27A0 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABE05F2BB75FEE00FB27A0 /* Task.swift */; };
 		02ABE0622BB7628200FB27A0 /* TodoListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABE0612BB7628200FB27A0 /* TodoListModel.swift */; };
 		02ABE0642BB7674400FB27A0 /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABE0632BB7674400FB27A0 /* TaskRow.swift */; };
 		02ABE0662BB7AEC800FB27A0 /* TextFieldSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABE0652BB7AEC800FB27A0 /* TextFieldSheetView.swift */; };
@@ -87,7 +87,7 @@
 		02ABE0562BB75CE300FB27A0 /* MainTabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarView.swift; sourceTree = "<group>"; };
 		02ABE0572BB75CE300FB27A0 /* Tab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		02ABE05D2BB75FAB00FB27A0 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
-		02ABE05F2BB75FEE00FB27A0 /* TaskItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItem.swift; sourceTree = "<group>"; };
+		02ABE05F2BB75FEE00FB27A0 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		02ABE0612BB7628200FB27A0 /* TodoListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListModel.swift; sourceTree = "<group>"; };
 		02ABE0632BB7674400FB27A0 /* TaskRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
 		02ABE0652BB7AEC800FB27A0 /* TextFieldSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldSheetView.swift; sourceTree = "<group>"; };
@@ -210,7 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				02ABE05D2BB75FAB00FB27A0 /* TodoListView.swift */,
-				02ABE05F2BB75FEE00FB27A0 /* TaskItem.swift */,
+				02ABE05F2BB75FEE00FB27A0 /* Task.swift */,
 				02ABE0612BB7628200FB27A0 /* TodoListModel.swift */,
 				02ABE0632BB7674400FB27A0 /* TaskRow.swift */,
 				02ABE0652BB7AEC800FB27A0 /* TextFieldSheetView.swift */,
@@ -437,7 +437,7 @@
 				02ABE0662BB7AEC800FB27A0 /* TextFieldSheetView.swift in Sources */,
 				02ABE0642BB7674400FB27A0 /* TaskRow.swift in Sources */,
 				02DE1A792BCDBACC0027CADB /* TodoListUseCase.swift in Sources */,
-				02ABE0602BB75FEE00FB27A0 /* TaskItem.swift in Sources */,
+				02ABE0602BB75FEE00FB27A0 /* Task.swift in Sources */,
 				0246E93B2CB4EDFF00E01320 /* NewToDoTaskSheetView.swift in Sources */,
 				02ABE0582BB75CE300FB27A0 /* MainTabBarItemView.swift in Sources */,
 				02DE03D32B8AC122008FA65A /* TipsApp.swift in Sources */,

@@ -27,7 +27,7 @@ struct TaskDetailRowView: View {
 struct TaskDetailView: View {
     
     @State private var taskCreationDate = Date()
-    @Binding var task: TaskItem
+    @Binding var task: Task
     
     var onEditAction: (() -> Void)?
     
@@ -112,7 +112,7 @@ struct TaskDetailView: View {
 
 #Preview {
     NavigationView {
-        TaskDetailView(task: .constant(TaskItem(title: "Test", isCompleted: false, isStarred: false))
+        TaskDetailView(task: .constant(.sampleData)
                        , onEditAction: nil)
     }
 }
