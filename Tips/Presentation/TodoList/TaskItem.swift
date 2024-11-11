@@ -18,25 +18,25 @@ class TaskItemObject: Object, Identifiable {
 }
 
 
-struct Task: Identifiable, Codable {
+struct TaskItem: Identifiable, Codable {
     var id: String
     var title: String
     var isCompleted: Bool
     var isStarred: Bool
     var dueDate: Date
-    var note: String?
+    var note: String
     
 }
 
-extension Task {
+extension TaskItem {
     init(taskObject: TaskItemObject) {
         self.id = taskObject.id.stringValue
         self.title = taskObject.title
         self.isCompleted = taskObject.isCompleted
         self.isStarred = taskObject.isStarred
         self.dueDate = taskObject.dueDate
-        self.note = taskObject.note
+        self.note = taskObject.note ?? ""
     }
     
-    static let sampleData: Task = .init(id: UUID().uuidString, title: "Task", isCompleted: true, isStarred: true, dueDate: Calendar.current.date(from: DateComponents(year: 2024, month: 10, day: 31))!)
+    static let sampleData: TaskItem = .init(id: UUID().uuidString, title: "Task", isCompleted: true, isStarred: true, dueDate: Calendar.current.date(from: DateComponents(year: 2024, month: 10, day: 31))!, note: "")
 }

@@ -15,9 +15,9 @@ struct TaskDetailRowView: View {
     var body: some View {
         HStack(spacing: 15) {
             Image(systemName: systemImage)
-                .foregroundColor(Color.iconTint)
+                .foregroundColor(.iconTint)
             Text(text)
-                .foregroundColor(Color.standardText)
+                .foregroundColor(.standardText)
         }
         .frame(height: 40)
         .listRowBackground(color)
@@ -26,26 +26,35 @@ struct TaskDetailRowView: View {
 
 struct TaskDetailView: View {
     
-    @State private var taskCreationDate = Date()
-    @Binding var task: Task
-    
+    @Binding var task: TaskItem
     var onEditAction: (() -> Void)?
+    
+    @State private var oldTitle: String = ""
+    @State private var oldDate = Date()
+    @State private var oldNote : String = ""
     
     var body: some View {
         VStack {
             titleRow
             List {
                 Section {
-                    TaskDetailRowView(text: "Remind Me", systemImage: "bell")
-                    TaskDetailRowView(text: "Add Due Date", systemImage: "calendar")
-                    TaskDetailRowView(text: "Repeat", systemImage: "arrow.triangle.2.circlepath")
-                    TaskDetailRowView(text: "Add File", systemImage: "paperclip")
-                    DatePicker("Created on",
-                               selection: $taskCreationDate,
-                               displayedComponents: [.date]
-                    )
-                    .listRowBackground(Color.theme.secondaryBackground)
-                    .frame(height: 40)
+                    TaskDetailRowView(text: String(localized: "Add File"), systemImage: "paperclip")
+                    HStack(spacing: 15) {
+                        Image(systemName: "calendar")
+                            .foregroundColor(.iconTint)
+                        DatePicker("Created on",
+                                   selection: $task.dueDate,
+                                   displayedComponents: [.date]
+                        )
+                        .listRowBackground(Color.theme.secondaryBackground)
+                        .frame(height: 40)
+                        .onChange(of: task.dueDate) { newDate in
+                            if oldDate != newDate {
+                                oldDate = newDate
+                                onEditAction?()
+                            }
+                        }
+                    }
                 }
                 
                 Section {
@@ -60,11 +69,10 @@ struct TaskDetailView: View {
         .background(Color.theme.background)
         .scrollContentBackground(.hidden)
         .navigationBarTitleDisplayMode(.inline)
-//        .navigationBarItems(trailing: Button(action: {
-//           
-//        }) {
-//            Image(systemName: "square.and.arrow.down")
-//        })
+//        .navigationBarItems(trailing: Button(action: { onEditAction?() }) {
+//            Text("Save")
+//        }
+//        .padding(.trailing, 5))
     }
     
     
@@ -80,10 +88,13 @@ struct TaskDetailView: View {
             
             TextField("", text: $task.title)
                 .font(.system(size: 25, weight: .medium))
-                .onChange(of: task.title) { _ in
-                    onEditAction?()
+                .onChange(of: task.title) { newTitle in
+                    if oldTitle != newTitle {
+                        oldTitle = newTitle
+                        onEditAction?()
+                    }
                 }
-        
+                
             Spacer()
             Button(action: {
                 task.isStarred.toggle()
@@ -100,13 +111,19 @@ struct TaskDetailView: View {
     }
     
     var note: some View {
-        TextEditor(text: $task.note.toUnwrapped(defaultValue: ""))
+        TextEditor(text: $task.note)
             .frame(height: 200)
             .foregroundColor(Color.standardText)
             .autocapitalization(.words)
             .scrollContentBackground(.hidden)
             .background(.clear)
             .listRowBackground(Color.theme.secondaryBackground)
+            .onChange(of: task.note ) { newNote in
+                if oldNote != newNote {
+                    oldNote = newNote
+                    onEditAction?()
+                }
+            }
     }
 }
 

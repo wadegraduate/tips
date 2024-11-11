@@ -11,7 +11,7 @@ import Combine
 struct CalculationView: View {
     
     @StateObject var viewModel = CalculationViewModel()
-    @FocusState var isFocused
+    
     let currencyFormatter: NumberFormatter
     
     init() {
@@ -42,25 +42,12 @@ struct CalculationView: View {
     
     var billInformation: some View {
         Section {
-            CurrencyTextField(String(localized: "Enter Bill Amount"),
-                              value: $viewModel.billAmount,
-                              currencySymbol: defaultCurrency, 
-                              font: .systemFont(ofSize: 30, weight: .medium),
-                              //foregroundColor: UIColor(Color.standardText),
-                              textAlignment: .left)
-            .padding()
-            .font(.system(size: 30, weight: .medium))
-            .frame(height: 60)
-            .keyboardType(.decimalPad)
-            .listRowBackground(Color.theme.secondaryBackground)
-            .toolbar {
-                ToolbarItemGroup(placement: .keyboard) {
-                    Spacer()
-                    Button("Done") {
-                        isFocused = false
-                    }
-                }
+            HStack {
+                Text(defaultCurrency + "$")
+                    .font(.system(size: 30, weight: .medium))
+                CurrencyTextField(value: $viewModel.billAmount, placeholder: String(localized: "Enter your amount"))
             }
+            .listRowBackground(Color.theme.secondaryBackground)
             
         } header: {
             Text(String(localized: "Bill Information"))

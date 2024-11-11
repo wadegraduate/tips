@@ -12,7 +12,6 @@ struct TodoListView: View {
     @ObservedObject var model: TodoListModel
     
     @State private var isShowingModal = false
-    @State private var textFieldText = ""
     @State private var showConfirm = false
     
     var body: some View {
@@ -61,28 +60,17 @@ struct TodoListView: View {
                         .shadow(radius: 4, x: 0, y: 4)
                 }.padding()
             }
-            .navigationBarTitle(String(localized: "To-do"))
         }
-        .navigationBarTitle(String(localized: "To-do"))
+        .navigationBarTitle(LocalizedString("To-do"))
         .navigationViewStyle(.stack)
         .sheet(isPresented: $isShowingModal, content: {
-            NewToDoTaskSheetView(text: $textFieldText,
-                                 isShowingModal: $isShowingModal,
+            NewToDoTaskSheetView(isShowingModal: $isShowingModal,
                                  addTaskAction: { taskText in
                 withAnimation() {
                     model.addTask(taskText: taskText)
                 }
             })
         })
-//        .overlay(
-//            isShowingModal ? TextFieldSheetView(text: $textFieldText,
-//                                                isShowingModal: $isShowingModal,
-//                                                addTaskAction: { taskText in
-//                                                    withAnimation() {
-//                                                        model.addTask(taskText: taskText)
-//                                                    }
-//                                                }) : nil
-//        )
     }
 }
 

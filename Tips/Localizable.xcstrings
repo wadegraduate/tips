@@ -16,6 +16,9 @@
     "Add a new task" : {
 
     },
+    "Add File" : {
+
+    },
     "Add your new item" : {
 
     },
@@ -40,7 +43,10 @@
     "Done" : {
 
     },
-    "Enter Bill Amount" : {
+    "Enter Amount" : {
+
+    },
+    "Enter your amount" : {
 
     },
     "Label" : {

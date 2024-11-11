@@ -12,9 +12,9 @@ import RealmSwift
 class TodoListModel: ObservableObject {
     
     @ObservedResults(TaskItemObject.self) var storedTaskItems
-    @Published var tasks: [Task] = []
-    private var token: NotificationToken?
+    @Published var tasks: [TaskItem] = []
     
+    private var token: NotificationToken?
     let useCase: TodoListUseCase
     
     init(useCase: TodoListUseCase = TodoListUseCaseImpl()){
@@ -28,7 +28,7 @@ class TodoListModel: ObservableObject {
             let results = realm.objects(TaskItemObject.self)
             
             token = results.observe({ [weak self] changes in
-                self?.tasks = results.map(Task.init)
+                self?.tasks = results.map(TaskItem.init)
             })
         } catch let error {
             print(error.localizedDescription)
@@ -45,7 +45,7 @@ class TodoListModel: ObservableObject {
         $storedTaskItems.append(task)
     }
     
-    func deleteTask(at task: Task) {
+    func deleteTask(at task: TaskItem) {
         do {
             let realm = try Realm()
             let objectId = try ObjectId(string: task.id)
@@ -59,7 +59,7 @@ class TodoListModel: ObservableObject {
         }
     }
     
-    func editTask(at task: Task) {
+    func editTask(at task: TaskItem) {
         do {
             let realm = try Realm()
             let objectId = try ObjectId(string: task.id)
@@ -68,6 +68,8 @@ class TodoListModel: ObservableObject {
                     object.title = task.title
                     object.isCompleted = task.isCompleted
                     object.isStarred = task.isStarred
+                    object.dueDate = task.dueDate
+                    object.note = task.note
                 }
             }
         } catch let error {

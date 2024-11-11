@@ -25,6 +25,7 @@ struct TipsApp: SwiftUI.App {
             }else {
                 LaunchView(isActive: $isActive)
             }
+            //ExampleView()
         }
     }
     

@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct TaskRow: View {
-    @Binding var task: Task
+    @Binding var task: TaskItem
     @Binding var showConfirm: Bool
     let deleteAction: () -> Void
     

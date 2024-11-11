@@ -16,6 +16,7 @@ final class CalculationViewModel: ObservableObject {
     
     var tipAmount: Double {
         if let billAmount = billAmount {
+            print("yoo", billAmount / 100 * tipPercentage)
             return billAmount / 100 * tipPercentage
         }
         return 0
