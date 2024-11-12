@@ -42,7 +42,7 @@ struct TaskDetailView: View {
                     HStack(spacing: 15) {
                         Image(systemName: "calendar")
                             .foregroundColor(.iconTint)
-                        DatePicker("Created on",
+                        DatePicker(LocalizedString("Created on"),
                                    selection: $task.dueDate,
                                    displayedComponents: [.date]
                         )
@@ -69,10 +69,6 @@ struct TaskDetailView: View {
         .background(Color.theme.background)
         .scrollContentBackground(.hidden)
         .navigationBarTitleDisplayMode(.inline)
-//        .navigationBarItems(trailing: Button(action: { onEditAction?() }) {
-//            Text("Save")
-//        }
-//        .padding(.trailing, 5))
     }
     
     

@@ -40,13 +40,13 @@ struct TaskRow: View {
             Button {
                 showConfirm = true
             } label: {
-                Label("Delete", systemImage: "trash")
+                Label(LocalizedString("Delete"), systemImage: "trash")
             }
             .tint(.red)
         }
         .confirmationDialog("\(task.title) will be permanently deleted?", isPresented: $showConfirm, titleVisibility: .visible) {
-            Button("Confirm", role: .destructive, action: deleteAction)
-            Button("Cancel", role: .cancel) {}
+            Button(LocalizedString("Confirm"), role: .destructive, action: deleteAction)
+            Button(LocalizedString("Cancel"), role: .cancel) {}
         }
     }
 }

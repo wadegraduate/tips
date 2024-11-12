@@ -15,14 +15,14 @@ struct MainTabBarView: View {
         TabView(selection: $selectedTab) {
             CalculationView()
                 .tabItem {
-                    Label("Tip Calculator", systemImage: "dollarsign.circle")
+                    Label(LocalizedString("Tip Calculator"), systemImage: "dollarsign.circle")
                 }
                 .tag(Tab.tipCalculator)
             
             TodoListView(model: TodoListViewModel())
                 //.environmentObject(TodoListModel())
                 .tabItem {
-                    Label("To-Do List", systemImage: "list.bullet")
+                    Label(LocalizedString("To-Do List"), systemImage: "list.bullet")
                 }
                 .tag(Tab.toDoList)
         }

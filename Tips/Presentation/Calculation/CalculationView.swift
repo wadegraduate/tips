@@ -12,16 +12,6 @@ struct CalculationView: View {
     
     @StateObject var viewModel = CalculationViewModel()
     
-    let currencyFormatter: NumberFormatter
-    
-    init() {
-        // Initialize the currency formatter
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .currency
-        formatter.currencyCode = "USD" // Set this to your desired currency code
-        self.currencyFormatter = formatter
-    }
-    
     var body: some View {
         NavigationStack {
             Form {
@@ -45,7 +35,7 @@ struct CalculationView: View {
             HStack {
                 Text(defaultCurrency + "$")
                     .font(.system(size: 30, weight: .medium))
-                CurrencyTextField(value: $viewModel.billAmount, placeholder: LocalizedString( "Enter your amount"))
+                CurrencyTextField(value: $viewModel.billAmount, placeholder: LocalizedString( "Amount"))
             }
             .listRowBackground(Color.theme.secondaryBackground)
             
@@ -70,8 +60,8 @@ struct CalculationView: View {
         Section {
             HStack {
                 Slider(value: $viewModel.tipPercentage, in: 0...30, step: 1)
-                    .accessibilityLabel(LocalizedString( "Tip Percentage Selection"))
-                    .accessibilityHint(LocalizedString( "Selects the Tip Percentage"))
+                    .accessibilityLabel(LocalizedString("Tip Percentage Selection"))
+                    .accessibilityHint(LocalizedString("Selects the Tip Percentage"))
                 Text("\(viewModel.tipPercentage, specifier: "%.0f")%")
                     .frame(width: 40, alignment: .trailing)
             }
@@ -80,7 +70,7 @@ struct CalculationView: View {
             
             tipAmountSelection
         } header: {
-            Text(LocalizedString( "Tip Amount"))
+            Text(LocalizedString("Tip Amount"))
                 .font(.system(size: 20, weight: .medium))
         }
     }
