@@ -25,7 +25,7 @@
 		02ABE05A2BB75CE300FB27A0 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABE0572BB75CE300FB27A0 /* Tab.swift */; };
 		02ABE05E2BB75FAB00FB27A0 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABE05D2BB75FAB00FB27A0 /* TodoListView.swift */; };
 		02ABE0602BB75FEE00FB27A0 /* TaskItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABE05F2BB75FEE00FB27A0 /* TaskItem.swift */; };
-		02ABE0622BB7628200FB27A0 /* TodoListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABE0612BB7628200FB27A0 /* TodoListModel.swift */; };
+		02ABE0622BB7628200FB27A0 /* TodoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABE0612BB7628200FB27A0 /* TodoListViewModel.swift */; };
 		02ABE0642BB7674400FB27A0 /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABE0632BB7674400FB27A0 /* TaskRow.swift */; };
 		02ABE0662BB7AEC800FB27A0 /* TextFieldSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABE0652BB7AEC800FB27A0 /* TextFieldSheetView.swift */; };
 		02DE03BB2B8AC0E3008FA65A /* tipsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE03BA2B8AC0E3008FA65A /* tipsUITests.swift */; };
@@ -38,7 +38,7 @@
 		02DE03DA2B8AC140008FA65A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02DE03D92B8AC140008FA65A /* Assets.xcassets */; };
 		02DE1A742BC9BB190027CADB /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE1A732BC9BB190027CADB /* TaskDetailView.swift */; };
 		02DE1A762BCC43630027CADB /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE1A752BCC43630027CADB /* Binding.swift */; };
-		02DE1A792BCDBACC0027CADB /* TodoListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE1A782BCDBACC0027CADB /* TodoListUseCase.swift */; };
+		02DE1A792BCDBACC0027CADB /* TodoListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE1A782BCDBACC0027CADB /* TodoListService.swift */; };
 		02ECE0292CD8808B004335A0 /* CurrencyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ECE0282CD8808B004335A0 /* CurrencyTextField.swift */; };
 		02ECE02B2CD9D5A3004335A0 /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ECE02A2CD9D5A3004335A0 /* FloatingButton.swift */; };
 /* End PBXBuildFile section */
@@ -91,7 +91,7 @@
 		02ABE0572BB75CE300FB27A0 /* Tab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		02ABE05D2BB75FAB00FB27A0 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
 		02ABE05F2BB75FEE00FB27A0 /* TaskItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItem.swift; sourceTree = "<group>"; };
-		02ABE0612BB7628200FB27A0 /* TodoListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListModel.swift; sourceTree = "<group>"; };
+		02ABE0612BB7628200FB27A0 /* TodoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewModel.swift; sourceTree = "<group>"; };
 		02ABE0632BB7674400FB27A0 /* TaskRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
 		02ABE0652BB7AEC800FB27A0 /* TextFieldSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldSheetView.swift; sourceTree = "<group>"; };
 		02C44A562B95893600C1E4BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = Tips/Info.plist; sourceTree = "<group>"; };
@@ -108,7 +108,7 @@
 		02DE03D92B8AC140008FA65A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02DE1A732BC9BB190027CADB /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
 		02DE1A752BCC43630027CADB /* Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
-		02DE1A782BCDBACC0027CADB /* TodoListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListUseCase.swift; sourceTree = "<group>"; };
+		02DE1A782BCDBACC0027CADB /* TodoListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListService.swift; sourceTree = "<group>"; };
 		02ECE0282CD8808B004335A0 /* CurrencyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTextField.swift; sourceTree = "<group>"; };
 		02ECE02A2CD9D5A3004335A0 /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -223,7 +223,7 @@
 			children = (
 				02ABE05D2BB75FAB00FB27A0 /* TodoListView.swift */,
 				02ABE05F2BB75FEE00FB27A0 /* TaskItem.swift */,
-				02ABE0612BB7628200FB27A0 /* TodoListModel.swift */,
+				02ABE0612BB7628200FB27A0 /* TodoListViewModel.swift */,
 				02ABE0632BB7674400FB27A0 /* TaskRow.swift */,
 				02ABE0652BB7AEC800FB27A0 /* TextFieldSheetView.swift */,
 				02DE1A732BC9BB190027CADB /* TaskDetailView.swift */,
@@ -304,7 +304,7 @@
 		02DE1A772BCDBAB20027CADB /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				02DE1A782BCDBACC0027CADB /* TodoListUseCase.swift */,
+				02DE1A782BCDBACC0027CADB /* TodoListService.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -448,11 +448,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				02ECE0292CD8808B004335A0 /* CurrencyTextField.swift in Sources */,
-				02ABE0622BB7628200FB27A0 /* TodoListModel.swift in Sources */,
+				02ABE0622BB7628200FB27A0 /* TodoListViewModel.swift in Sources */,
 				02ECE02B2CD9D5A3004335A0 /* FloatingButton.swift in Sources */,
 				02ABE0662BB7AEC800FB27A0 /* TextFieldSheetView.swift in Sources */,
 				02ABE0642BB7674400FB27A0 /* TaskRow.swift in Sources */,
-				02DE1A792BCDBACC0027CADB /* TodoListUseCase.swift in Sources */,
+				02DE1A792BCDBACC0027CADB /* TodoListService.swift in Sources */,
 				02ABE0602BB75FEE00FB27A0 /* TaskItem.swift in Sources */,
 				0246E93B2CB4EDFF00E01320 /* NewToDoTaskSheetView.swift in Sources */,
 				02ABE0582BB75CE300FB27A0 /* MainTabBarItemView.swift in Sources */,

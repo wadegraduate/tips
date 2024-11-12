@@ -29,6 +29,7 @@ struct TaskItem: Identifiable, Codable {
 }
 
 extension TaskItem {
+    
     init(taskObject: TaskItemObject) {
         self.id = taskObject.id.stringValue
         self.title = taskObject.title
@@ -38,5 +39,26 @@ extension TaskItem {
         self.note = taskObject.note ?? ""
     }
     
-    static let sampleData: TaskItem = .init(id: UUID().uuidString, title: "Task", isCompleted: true, isStarred: true, dueDate: Calendar.current.date(from: DateComponents(year: 2024, month: 10, day: 31))!, note: "")
+    static let sampleData: TaskItem = .init(id: UUID().uuidString,
+                                            title: "Task",
+                                            isCompleted: true,
+                                            isStarred: true,
+                                            dueDate: Date(),
+                                            note: "")
+}
+
+extension TaskItemObject {
+    convenience init(taskItem: TaskItem) {
+        self.init()
+        do {
+            self.id = try ObjectId(string: taskItem.id)
+        } catch {
+            self.id = .generate()
+        }
+        self.title = taskItem.title
+        self.isCompleted = taskItem.isCompleted
+        self.isStarred = taskItem.isStarred
+        self.dueDate = taskItem.dueDate
+        self.note = taskItem.note
+    }
 }

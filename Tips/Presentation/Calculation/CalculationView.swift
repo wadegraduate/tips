@@ -35,7 +35,7 @@ struct CalculationView: View {
             .onTapGesture {
                 hideKeyboard()
             }
-            .navigationTitle(String(localized: "Tips"))
+            .navigationTitle(LocalizedString( "Tips"))
         }
     }
     
@@ -45,12 +45,12 @@ struct CalculationView: View {
             HStack {
                 Text(defaultCurrency + "$")
                     .font(.system(size: 30, weight: .medium))
-                CurrencyTextField(value: $viewModel.billAmount, placeholder: String(localized: "Enter your amount"))
+                CurrencyTextField(value: $viewModel.billAmount, placeholder: LocalizedString( "Enter your amount"))
             }
             .listRowBackground(Color.theme.secondaryBackground)
             
         } header: {
-            Text(String(localized: "Bill Information"))
+            Text(LocalizedString( "Bill Information"))
         }
     }
     
@@ -60,7 +60,7 @@ struct CalculationView: View {
             LabeledAmountView(localisedString: "Tip", value: viewModel.tipAmount)
             LabeledAmountView(localisedString: "Total With Tip", value: viewModel.totalAmountWithTip)
         } header: {
-            Text(String(localized: "Bill Totals"))
+            Text(LocalizedString( "Bill Totals"))
                 .font(.system(size: 20, weight: .medium))
         }
         
@@ -70,8 +70,8 @@ struct CalculationView: View {
         Section {
             HStack {
                 Slider(value: $viewModel.tipPercentage, in: 0...30, step: 1)
-                    .accessibilityLabel(String(localized: "Tip Percentage Selection"))
-                    .accessibilityHint(String(localized: "Selects the Tip Percentage"))
+                    .accessibilityLabel(LocalizedString( "Tip Percentage Selection"))
+                    .accessibilityHint(LocalizedString( "Selects the Tip Percentage"))
                 Text("\(viewModel.tipPercentage, specifier: "%.0f")%")
                     .frame(width: 40, alignment: .trailing)
             }
@@ -80,7 +80,7 @@ struct CalculationView: View {
             
             tipAmountSelection
         } header: {
-            Text(String(localized: "Tip Amount"))
+            Text(LocalizedString( "Tip Amount"))
                 .font(.system(size: 20, weight: .medium))
         }
     }
@@ -114,7 +114,7 @@ struct CalculationView: View {
                     viewModel.resetValues()
                 }, label: {
                     Spacer()
-                    Text(String(localized: "Reset"))
+                    Text(LocalizedString( "Reset"))
                         .foregroundColor(Color.theme.red)
                     Spacer()
                 })

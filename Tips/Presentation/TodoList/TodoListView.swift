@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TodoListView: View {
     
-    @ObservedObject var model: TodoListModel
+    @ObservedObject var model: TodoListViewModel
     
     @State private var isShowingModal = false
     @State private var showConfirm = false
@@ -22,7 +22,7 @@ struct TodoListView: View {
                 Group {
                     if model.tasks.isEmpty {
                         GeometryReader { geometry in
-                            Text("Add your new item")
+                            Text(LocalizedString("Add your new item"))
                                 .font(.system(size: 24, weight: .medium))
                                 .foregroundColor(.gray)
                                 .position(x: geometry.size.width / 2, y: geometry.size.height / 2)
@@ -75,5 +75,5 @@ struct TodoListView: View {
 }
 
 #Preview {
-    TodoListView(model: TodoListModel())
+    TodoListView(model: TodoListViewModel())
 }

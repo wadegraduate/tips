@@ -50,12 +50,12 @@ struct TextFieldSheetView: View {
                             
                 HStack(alignment: .center) {
                     Spacer()
-                    Button(String(localized: "Cancel")) {
+                    Button(LocalizedString( "Cancel")) {
                         text = ""
                         isShowingModal = false
                     }
                     Spacer()
-                    Button(String(localized: "Add")) {
+                    Button(LocalizedString( "Add")) {
                         addTaskAction(text)
                         text = ""
                         isShowingModal = false

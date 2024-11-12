@@ -38,7 +38,7 @@ struct TaskDetailView: View {
             titleRow
             List {
                 Section {
-                    TaskDetailRowView(text: String(localized: "Add File"), systemImage: "paperclip")
+                    TaskDetailRowView(text: LocalizedString( "Add File"), systemImage: "paperclip")
                     HStack(spacing: 15) {
                         Image(systemName: "calendar")
                             .foregroundColor(.iconTint)
@@ -60,7 +60,7 @@ struct TaskDetailView: View {
                 Section {
                     note
                 } header: {
-                    Text(String(localized: "Note"))
+                    Text(LocalizedString( "Note"))
                 }
                 
             }

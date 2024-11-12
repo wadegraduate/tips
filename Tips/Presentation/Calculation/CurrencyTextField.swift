@@ -18,7 +18,7 @@ struct CurrencyTextField: View {
         
     var body: some View {
         VStack {
-            TextField(placeholder ?? String(localized: "Enter Amount"), text: $amount)
+            TextField(placeholder ?? LocalizedString( "Enter Amount"), text: $amount)
                 .keyboardType(.decimalPad)
                 .onChange(of: amount) { newValue in
                     if newValue.isEmpty {
