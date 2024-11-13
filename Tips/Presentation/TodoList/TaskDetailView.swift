@@ -27,7 +27,7 @@ struct TaskDetailRowView: View {
 struct TaskDetailView: View {
     
     @Binding var task: TaskItem
-    var onEditAction: (() -> Void)?
+    var onEdit: (() -> Void)?
     
     @State private var oldTitle: String = ""
     @State private var oldDate = Date()
@@ -38,23 +38,9 @@ struct TaskDetailView: View {
             titleRow
             List {
                 Section {
-                    TaskDetailRowView(text: LocalizedString( "Add File"), systemImage: "paperclip")
-                    HStack(spacing: 15) {
-                        Image(systemName: "calendar")
-                            .foregroundColor(.iconTint)
-                        DatePicker(LocalizedString("Created on"),
-                                   selection: $task.dueDate,
-                                   displayedComponents: [.date]
-                        )
-                        .listRowBackground(Color.theme.secondaryBackground)
-                        .frame(height: 40)
-                        .onChange(of: task.dueDate) { newDate in
-                            if oldDate != newDate {
-                                oldDate = newDate
-                                onEditAction?()
-                            }
-                        }
-                    }
+//                    TaskDetailRowView(text: LocalizedString( "Add File"),
+//                                      systemImage: "paperclip")
+                    datePickerRow
                 }
                 
                 Section {
@@ -72,10 +58,30 @@ struct TaskDetailView: View {
     }
     
     
+    var datePickerRow: some View {
+        HStack(spacing: 15) {
+            Image(systemName: "calendar")
+                .foregroundColor(.iconTint)
+            DatePicker(LocalizedString("Created on"),
+                       selection: $task.dueDate,
+                       displayedComponents: [.date]
+            )
+            .frame(height: 40)
+            .onChange(of: task.dueDate) { newDate in
+                if oldDate != newDate {
+                    oldDate = newDate
+                    onEdit?()
+                }
+            }
+        }
+        .listRowBackground(Color.theme.secondaryBackground)
+    }
+    
     var titleRow: some View {
         HStack(spacing: 15) {
             Button(action: {
                 task.isCompleted.toggle()
+                onEdit?()
             }) {
                 Image(systemName: task.isCompleted ? "checkmark.circle.fill" : "circle")
                     .foregroundColor(task.isCompleted ? .green : .gray)
@@ -87,13 +93,14 @@ struct TaskDetailView: View {
                 .onChange(of: task.title) { newTitle in
                     if oldTitle != newTitle {
                         oldTitle = newTitle
-                        onEditAction?()
+                        onEdit?()
                     }
                 }
                 
             Spacer()
             Button(action: {
                 task.isStarred.toggle()
+                onEdit?()
             }, label: {
                 Image(systemName: task.isStarred ? "star.fill" : "star")
                     .foregroundColor(task.isStarred ? .yellow : .gray)
@@ -117,7 +124,7 @@ struct TaskDetailView: View {
             .onChange(of: task.note ) { newNote in
                 if oldNote != newNote {
                     oldNote = newNote
-                    onEditAction?()
+                    onEdit?()
                 }
             }
     }
@@ -126,6 +133,6 @@ struct TaskDetailView: View {
 #Preview {
     NavigationView {
         TaskDetailView(task: .constant(.sampleData)
-                       , onEditAction: nil)
+                       , onEdit: nil)
     }
 }

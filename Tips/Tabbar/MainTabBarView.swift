@@ -19,7 +19,7 @@ struct MainTabBarView: View {
                 }
                 .tag(Tab.tipCalculator)
             
-            TodoListView(model: TodoListViewModel())
+            TodoListView(viewModel: TodoListViewModel())
                 //.environmentObject(TodoListModel())
                 .tabItem {
                     Label(LocalizedString("To-Do List"), systemImage: "list.bullet")

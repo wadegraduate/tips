@@ -27,10 +27,10 @@ class TodoListViewModel: ObservableObject {
             for await tasks in service.tasksStream {
                 await MainActor.run {
                     self.tasks = tasks
+                    self.sortListByStarred()
                 }
             }
         }
-            
     }
     
     func addTask(taskText: String) {
@@ -51,5 +51,10 @@ class TodoListViewModel: ObservableObject {
     
     func editTask(at task: TaskItem) {
         service.editTask(task: task)
+        sortListByStarred()
+    }
+    
+    func sortListByStarred() {
+        tasks.sort { $0.isStarred && !$1.isStarred }
     }
 }

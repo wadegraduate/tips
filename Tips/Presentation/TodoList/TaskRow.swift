@@ -11,7 +11,7 @@ import SwiftUI
 struct TaskRow: View {
     @Binding var task: TaskItem
     @Binding var showConfirm: Bool
-    let deleteAction: () -> Void
+    let onDelete: () -> Void
     
     var body: some View {
         HStack {
@@ -45,7 +45,7 @@ struct TaskRow: View {
             .tint(.red)
         }
         .confirmationDialog("\(task.title) will be permanently deleted?", isPresented: $showConfirm, titleVisibility: .visible) {
-            Button(LocalizedString("Confirm"), role: .destructive, action: deleteAction)
+            Button(LocalizedString("Confirm"), role: .destructive, action: onDelete)
             Button(LocalizedString("Cancel"), role: .cancel) {}
         }
     }
@@ -53,5 +53,5 @@ struct TaskRow: View {
 
 
 #Preview {
-    TaskRow(task: .constant(.sampleData), showConfirm: .constant(false), deleteAction: {})
+    TaskRow(task: .constant(.sampleData), showConfirm: .constant(false), onDelete: {})
 }

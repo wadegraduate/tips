@@ -4,9 +4,6 @@
     "" : {
 
     },
-    "%.0f%%" : {
-
-    },
     "%@ will be permanently deleted?" : {
 
     },
@@ -16,7 +13,7 @@
     "Add a new task" : {
 
     },
-    "Add File" : {
+    "Add new task" : {
 
     },
     "Add your new item" : {
