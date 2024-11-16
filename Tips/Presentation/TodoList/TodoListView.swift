@@ -27,11 +27,21 @@ struct TodoListView: View {
         List {
             ForEach($viewModel.tasks) { $task in
                 TaskRowContainer(task: $task,
-                                 showConfirm: $showConfirm,
-                                 onDelete: { viewModel.deleteTask(at: task) },
-                                 onEdit: { viewModel.editTask(at: task) })
+                                 onDelete: {
+                    viewModel.deletedTask = task
+                    showConfirm = true
+                },
+                                 onEdit: {
+                    viewModel.editTask(at: task)
+                })
             }
             .listRowBackground(Color.theme.secondaryBackground)
+        }
+        .confirmationDialog("\(viewModel.deletedTask?.title ?? "") will be permanently deleted?", isPresented: $showConfirm, titleVisibility: .visible) {
+            Button(LocalizedString("Confirm"), role: .destructive, action: {
+                viewModel.deleteTask()
+            })
+            Button(LocalizedString("Cancel"), role: .cancel) {}
         }
         .listRowSpacing(5)
         .background(Color.theme.background)
@@ -84,7 +94,6 @@ struct TodoListView: View {
 
 private struct TaskRowContainer: View {
     @Binding var task: TaskItem
-    @Binding var showConfirm: Bool
     let onDelete: () -> Void
     let onEdit: () -> Void
     
@@ -101,7 +110,6 @@ private struct TaskRowContainer: View {
             
             TaskRow(
                 task: $task,
-                showConfirm: $showConfirm,
                 onDelete: onDelete
             )
             .onChange(of: task.isStarred) { _ in

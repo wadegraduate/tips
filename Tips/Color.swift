@@ -16,6 +16,7 @@ struct ColorTheme {
     let background = Color("background")
     let secondaryBackground = Color("secondaryBackground")
     let secondaryBlue = Color("secondaryBlue")
+    let sheetColor1 = Color("SheetColor1")
     let standardText = Color("standardText")
     let primaryGray = Color(#colorLiteral(red: 0.6980392157, green: 0.7176470588, blue: 0.7607843137, alpha: 1))
     let secondaryGray = Color(#colorLiteral(red: 0.5764705882, green: 0.5882352941, blue: 0.6392156863, alpha: 1))

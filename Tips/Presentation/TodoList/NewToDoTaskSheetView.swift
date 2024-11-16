@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+typealias TaskTitle = String
+
 struct NewToDoTaskSheetView: View {
   
     @State private(set) var text: String? = nil
@@ -15,7 +17,7 @@ struct NewToDoTaskSheetView: View {
     @State private var taskCreationDate = Date()
     
     var addTaskAction: (TaskTitle) -> Void
-    var placeholderText: String = "Enter your text"
+    var placeholderText: String = LocalizedString("Enter your text")
     
     var body: some View {
         NavigationStack {
@@ -23,7 +25,7 @@ struct NewToDoTaskSheetView: View {
                 dateRow
                 textEditor
                 Spacer()
-                Button("Save") {
+                Button(LocalizedString("Save")) {
                     addTaskAction(text ?? "")
                     text = ""
                     isShowingModal = false
@@ -31,10 +33,9 @@ struct NewToDoTaskSheetView: View {
                 .buttonStyle(.style1)
                 .padding()
                 
-                
-                
             }
-            .navigationBarTitle("Add a new task", displayMode: .inline)
+            .background(.sheetColor1)
+            .navigationBarTitle(LocalizedString("Add a new task"), displayMode: .inline)
             .navigationBarItems(leading: Button {
                 text = ""
                 isShowingModal = false
@@ -68,11 +69,13 @@ struct NewToDoTaskSheetView: View {
         ZStack(alignment: .topLeading) {
             Text(placeholderText)
                 .padding(EdgeInsets(top: 8, leading: 4, bottom: 0, trailing: 0))
-                .foregroundColor(.standardText)
+                .foregroundColor(.gray)
+                .opacity(text != nil ? 0 : 1)
             
             TextEditor(text: Binding($text, replacingNilWith: ""))
                 .padding(.all, 0)
                 .opacity(text != nil ? 1 : 0.8)
+                .scrollContentBackground(.hidden)
         }
         .padding()
     }

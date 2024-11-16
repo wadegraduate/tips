@@ -13,6 +13,7 @@ class TodoListViewModel: ObservableObject {
     
     @Published var tasks: [TaskItem] = []
     let service: TodoListService
+    var deletedTask: TaskItem?
     private var taskCancellable: Task<Void, Never>?
     
     init(service: TodoListService = DefaultTodoListService()){
@@ -45,7 +46,8 @@ class TodoListViewModel: ObservableObject {
         service.addTask(task: task)
     }
     
-    func deleteTask(at task: TaskItem) {
+    func deleteTask() {
+        guard let task = deletedTask else { return }
         service.deleteTask(task: task)
     }
     

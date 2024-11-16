@@ -4,10 +4,10 @@
     "" : {
 
     },
-    "%@ will be permanently deleted?" : {
+    "%.0f%%" : {
 
     },
-    "Add" : {
+    "%@ will be permanently deleted?" : {
 
     },
     "Add a new task" : {
@@ -44,6 +44,9 @@
 
     },
     "Enter Amount" : {
+
+    },
+    "Enter your text" : {
 
     },
     "Label" : {

@@ -10,7 +10,6 @@ import SwiftUI
 
 struct TaskRow: View {
     @Binding var task: TaskItem
-    @Binding var showConfirm: Bool
     let onDelete: () -> Void
     
     var body: some View {
@@ -38,20 +37,16 @@ struct TaskRow: View {
         .frame(minHeight: 40)
         .swipeActions(edge: .trailing, allowsFullSwipe: true) {
             Button {
-                showConfirm = true
+                onDelete()
             } label: {
                 Label(LocalizedString("Delete"), systemImage: "trash")
             }
             .tint(.red)
-        }
-        .confirmationDialog("\(task.title) will be permanently deleted?", isPresented: $showConfirm, titleVisibility: .visible) {
-            Button(LocalizedString("Confirm"), role: .destructive, action: onDelete)
-            Button(LocalizedString("Cancel"), role: .cancel) {}
         }
     }
 }
 
 
 #Preview {
-    TaskRow(task: .constant(.sampleData), showConfirm: .constant(false), onDelete: {})
+    TaskRow(task: .constant(.sampleData), onDelete: {})
 }

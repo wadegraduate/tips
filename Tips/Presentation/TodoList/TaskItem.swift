@@ -19,7 +19,7 @@ class TaskItemObject: Object, Identifiable {
 
 
 struct TaskItem: Identifiable, Codable, Equatable {
-    var id: String
+    let id: String
     var title: String
     var isCompleted: Bool
     var isStarred: Bool

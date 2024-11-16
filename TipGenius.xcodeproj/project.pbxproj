@@ -27,7 +27,6 @@
 		02ABE0602BB75FEE00FB27A0 /* TaskItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABE05F2BB75FEE00FB27A0 /* TaskItem.swift */; };
 		02ABE0622BB7628200FB27A0 /* TodoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABE0612BB7628200FB27A0 /* TodoListViewModel.swift */; };
 		02ABE0642BB7674400FB27A0 /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABE0632BB7674400FB27A0 /* TaskRow.swift */; };
-		02ABE0662BB7AEC800FB27A0 /* TextFieldSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABE0652BB7AEC800FB27A0 /* TextFieldSheetView.swift */; };
 		02DE03BB2B8AC0E3008FA65A /* tipsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE03BA2B8AC0E3008FA65A /* tipsUITests.swift */; };
 		02DE03BD2B8AC0E3008FA65A /* tipsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE03BC2B8AC0E3008FA65A /* tipsUITestsLaunchTests.swift */; };
 		02DE03D22B8AC122008FA65A /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 02DE03CA2B8AC122008FA65A /* Localizable.xcstrings */; };
@@ -93,7 +92,6 @@
 		02ABE05F2BB75FEE00FB27A0 /* TaskItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItem.swift; sourceTree = "<group>"; };
 		02ABE0612BB7628200FB27A0 /* TodoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewModel.swift; sourceTree = "<group>"; };
 		02ABE0632BB7674400FB27A0 /* TaskRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
-		02ABE0652BB7AEC800FB27A0 /* TextFieldSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldSheetView.swift; sourceTree = "<group>"; };
 		02C44A562B95893600C1E4BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = Tips/Info.plist; sourceTree = "<group>"; };
 		02DE039C2B8AC0E1008FA65A /* TipGenius.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipGenius.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02DE03AC2B8AC0E3008FA65A /* TipGeniusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipGeniusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -225,7 +223,6 @@
 				02ABE05F2BB75FEE00FB27A0 /* TaskItem.swift */,
 				02ABE0612BB7628200FB27A0 /* TodoListViewModel.swift */,
 				02ABE0632BB7674400FB27A0 /* TaskRow.swift */,
-				02ABE0652BB7AEC800FB27A0 /* TextFieldSheetView.swift */,
 				02DE1A732BC9BB190027CADB /* TaskDetailView.swift */,
 				0246E93A2CB4EDFF00E01320 /* NewToDoTaskSheetView.swift */,
 				02ECE02A2CD9D5A3004335A0 /* FloatingButton.swift */,
@@ -450,7 +447,6 @@
 				02ECE0292CD8808B004335A0 /* CurrencyTextField.swift in Sources */,
 				02ABE0622BB7628200FB27A0 /* TodoListViewModel.swift in Sources */,
 				02ECE02B2CD9D5A3004335A0 /* FloatingButton.swift in Sources */,
-				02ABE0662BB7AEC800FB27A0 /* TextFieldSheetView.swift in Sources */,
 				02ABE0642BB7674400FB27A0 /* TaskRow.swift in Sources */,
 				02DE1A792BCDBACC0027CADB /* TodoListService.swift in Sources */,
 				02ABE0602BB75FEE00FB27A0 /* TaskItem.swift in Sources */,
