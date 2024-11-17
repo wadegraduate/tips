@@ -40,7 +40,8 @@ struct CalculationView: View {
             .listRowBackground(Color.theme.secondaryBackground)
             
         } header: {
-            Text(LocalizedString( "Bill Information"))
+            Text(LocalizedString( "Amount"))
+                .font(.system(size: 20, weight: .medium))
         }
     }
     
